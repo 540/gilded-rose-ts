@@ -41,45 +41,61 @@ const updateItemQuality = (item: Item) => {
   }
 
   if (item.name != 'Sulfuras, Hand of Ragnaros') {
-    item.sellIn = item.sellIn - 1;
+    item.sellIn -= 1;
   }
 
 }
 
 const updateAgedBrieQuality = (item: Item) => {
-  if (item.quality < 50) {
-    item.quality = item.quality + 1
+  if (item.quality >= 50) {
+    return
   }
-  if (item.quality < 50 && item.sellIn <= 0) {
-    item.quality = item.quality + 1
+
+  if (item.sellIn <= 0) {
+    item.quality += 2
+    return;
   }
+
+  item.quality += 1
 }
 
 const updateBackStageQuality = (item: Item) => {
-  if (item.quality < 50) {
-    item.quality = item.quality + 1
-    if (item.sellIn <= 10) {
-      item.quality = item.quality + 1
-    }
-    if (item.sellIn <= 5) {
-      item.quality = item.quality + 1
-    }
+  if (item.quality >= 50) {
+    return
+  }
 
-  }
   if (item.sellIn <= 0) {
-    item.quality = item.quality - item.quality
+    item.quality = 0
+    return;
   }
-};
+
+  if (item.sellIn <= 5) {
+    item.quality += 3
+    return;
+  }
+
+  if (item.sellIn <= 10) {
+    item.quality += 2
+    return;
+  }
+
+  item.quality += 1
+
+}
 
 const updateSulfurasQuality = (item: Item) => {
   //do nothing
 }
 
 const updateBasicItem = (item: Item) => {
-  if (item.quality > 0 && item.sellIn <= 0) {
-    item.quality = item.quality - 1
+  if (item.sellIn <= 0) {
+    item.quality -= 2
+  } else {
+    item.quality -= 1
   }
-  if (item.quality > 0) {
-    item.quality = item.quality - 1
+
+  if (item.quality < 0) {
+    item.quality = 0
   }
+
 }
