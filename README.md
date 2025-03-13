@@ -1,17 +1,20 @@
 # Gilded Rose Refactoring and Testing Kata
 
-This is the Gilded Rose kata in TypeScript. This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](https://iamnotmyself.com/refactor-this-the-gilded-rose-kata/).
+<p align ="center">
+<img src="GildedRose.jpeg" alt="Gilded Rose Shop" style="width:400px">
+</p>
 
-## Getting started
-- Install dependencies:
-`npm install`
-- Run app:
-`npm run test:print -- <days>`
-- Running tests:
-`npm run test`
-- Running in watch mode
-`npm run test:watch`
+- ### [Enunciado](Enunciado.md)
 
-# Requirements
-- [Español](Requirements_es.md)
-- [English](Requirements_en.md)
+## Comandos útiles
+
+- Instalar dependencias:
+  `npm install`
+- Correr la aplicación:
+  `npm run test:print -- <days>`
+- Correr los test:
+  `npm run test`
+- Correr los test en watch mode
+  `npm run test:watch`
+
+This is the Gilded Rose kata in TypeScript. This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose).
